@@ -1,0 +1,27 @@
+<html>  
+<head>  
+<title>Stub Test</title>  
+</head>  
+<body>  
+  <form method="POST" action="">
+  <center> 
+    <h1>Please paste the response here</h1>  
+    <textarea id="jsonResponseField" name="jsresponse" cols=100 rows=25 onblur="prettyPrint()"></textarea>
+    <br>
+    <input type="submit" value="Save" style="margin-top: 15px;">
+  </center>
+ </form> 
+</body>  
+</html>  
+
+<script>
+function prettyPrint() {
+  var textAreaId = "jsonResponseField"
+  var ugly = document.getElementById(textAreaId).value;
+  var removeQuotes = ugly.replace(/'/g, '"');
+  console.log(removeQuotes);
+  var obj = JSON.parse(removeQuotes);
+  var pretty = JSON.stringify(obj, undefined, 4);
+  document.getElementById(textAreaId).value = pretty;
+}
+</script>
