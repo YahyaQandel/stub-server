@@ -19,7 +19,7 @@ def index():
 
         with open('data.txt', 'w') as outfile:
           json.dump(response_data['jsresponse'], outfile)
-        return Response(status=HTTPStatus.OK,response={'you can visit now <a href="/stub">url</a>'.format(host)})
+        return render_template('output.html')
         
 
 @app.route("/stub",methods=['GET'])

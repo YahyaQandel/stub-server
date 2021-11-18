@@ -1,0 +1,23 @@
+<html>  
+<head>  
+<title>Stub Test</title>  
+</head>  
+<body onload="getPageUrl()">  
+  <form method="POST" action="">
+  <center>
+    <br>
+    <h1>You can now use </h1>  
+    <a id="urlLink" href=""></a>
+    <h1>as api url</h1>
+  </center>
+ </form> 
+</body>  
+</html>  
+
+<script>
+function getPageUrl() {
+  var url = window.origin;
+  document.getElementById('urlLink').href = url+"/stub"
+  document.getElementById('urlLink').innerText = url+"/stub"
+}
+</script>
