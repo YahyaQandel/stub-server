@@ -1,5 +1,8 @@
 # Test Stub Api
 
+## description
+This application helps create a stub with provided response in order to use it in testing purpose.
+
 ## installation 
 install docker
 
